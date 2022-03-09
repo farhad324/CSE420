@@ -1,4 +1,4 @@
-###Input: 
+##Input: 
 
 ```python
 int a, b, c;
@@ -17,7 +17,7 @@ else
 }
 ```
 
-###Output:
+##Output:
 
 ```python
 Keywords: int, float, if, else
