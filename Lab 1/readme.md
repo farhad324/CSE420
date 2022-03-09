@@ -1,6 +1,6 @@
 ### Input: 
 
-```python
+```C
 int a, b, c;
 float d, e;
 a = b = 5;
@@ -19,7 +19,7 @@ else
 
 ### Output:
 
-```python
+```
 Keywords: int, float, if, else
 Identifiers: a, b, c, d, e
 Math Operators:=, -, +
