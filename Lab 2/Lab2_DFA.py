@@ -2,12 +2,11 @@ c = (int(input()))
 strings = []
 for j in range(c):
     strings.append(input())
-x = 0
-count = 1
+
 for j in range(len(strings)):
 
-    flag = "False"
-    # fg="fl"
+    flag = False
+
     email = strings[j]
     if "@" in email and not email.startswith("www.") and not email[0].isnumeric() and not email.startswith(
             '.') and not '..' in email and not " " in email:
@@ -51,7 +50,7 @@ for j in range(len(strings)):
                 # print("state6")
             elif state == 5 and i.isalpha():
                 state = 5
-                flag = "True"
+                flag = True
                 # e=st[0]
                 # print("state5")
             elif state == 5 and i.isnumeric() and i == "@" and i == ".":
@@ -60,18 +59,12 @@ for j in range(len(strings)):
                 # print("state5")
             elif state == 6 and i.isalpha() and i.isnumeric() and i == "@" and i == ".":
                 state = 6
-        if flag == "True":
+        if flag == True:
             # print("valid" )
             print("Email, " + str(j+1))
-    # elif flag== "False":
 
-    # print("invalid email"+"," + str(count))
-    x += 1
-    count += 1
-    y = 0
-    c_web = 1
-    flag = "False"
-    # fg="fl"
+    flag = False
+
     email = strings[j]
     fg = "fl"
     if email.startswith('www.') and not email[0].isnumeric() and not '..' in email and not " " in email and (
@@ -118,14 +111,12 @@ for j in range(len(strings)):
             elif state == 5 and i.isalpha():
                 state = 5
                 # print("state11w")
-                fg = "Tr"
+                flag = True
 
             elif state == 5 and i.isnumeric() and i == "@" and i == ".":
                 state = 6
 
-        if fg == "Tr":
+        if flag == True:
             # print("valid" )
             print("Web, " + str(j+1))
 
-    y += 1
-    c_web += 1
