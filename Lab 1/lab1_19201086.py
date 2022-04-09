@@ -19,14 +19,18 @@ a = False
 for ch in lines.split():
 
     try:
-        i.isnumeric()
+        float(ch)
         a = True
     except ValueError:
         a = False
 
     if a:
-        if i not in numerics:
-            numerics.append(i)
+        if ch not in numerics:
+            numerics.append(ch)
+
+    if a:
+        if ch not in numerics:
+            numerics.append(ch)
     elif (ch == '.' or ch == ',' or ch == ';' or ch == '(' or ch == ')' or ch == '{' or ch == '}'):
         if ch not in others:
             others.append(ch)
