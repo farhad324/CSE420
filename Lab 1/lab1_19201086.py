@@ -28,16 +28,13 @@ for ch in lines.split():
         if ch not in numerics:
             numerics.append(ch)
 
-    if a:
-        if ch not in numerics:
-            numerics.append(ch)
     elif (ch == '.' or ch == ',' or ch == ';' or ch == '(' or ch == ')' or ch == '{' or ch == '}'):
         if ch not in others:
             others.append(ch)
     elif (ch == '+' or ch == '-' or ch == '=' or ch == '*' or ch == '/' or ch == '%'):
         if ch not in math_ops:
             math_ops.append(ch)
-    elif (ch == '>' or ch == '<' or ch == '&&' or ch == '||' or ch == '!' or ch == '%'):
+    elif (ch == '>' or ch == '<' or ch == '&&' or ch == '||' or ch == '!'):
         if ch not in logical_ops:
             logical_ops.append(ch)
     elif ch in keywords:
